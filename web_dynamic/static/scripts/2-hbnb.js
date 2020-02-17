@@ -1,32 +1,20 @@
-function check () {
-  $.ajax({
-    url: 'http://0.0.0.0:5001/api/v1/status/',
-    type: 'GET',
-    success: function (data) {
-      if (data.success === 'OK'){
-        $.('DIV#api_status').toggleClass('available');
-      }
-    },
-    error: function (data) {
-      console.log(data);
-    }
-  });
-}
-
-
 $(document).ready(function () {
   const AmeId = {};
-  
+
   $.ajax({
     url: 'http://0.0.0.0:5001/api/v1/status/',
     type: 'GET',
+    dataType: 'json',
     success: function (data) {
-      if (data.success === 'OK'){
-        $.('DIV#api_status').toggleClass('available');
+      if (data.status === 'OK') {
+        $('DIV#api_status').addClass('available');
+      } else {
+        $('DIV#api_status').removeClass('available');
       }
     },
     error: function (data) {
-      console.log(data);
+      /** console.log(data); */
+      $('DIV#api_status').removeClass('available');
     }
   });
 
