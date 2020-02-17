@@ -11,15 +11,19 @@ header {
 	height: 70px;
 	width: 100%;
 	border-bottom: 1px solid #CCCCCC;
+	display: flex;
+	justify-content: flex-end;
 }
 
 #api_status {
-	border-radius: 25px;
+	border-radius: 40px;
 	width: 40px;
-	margin: auto 30px auto auto;
+	height: 40px; 
 	background-color: #cccccc;
+	align-self: center;
+	margin: auto 30px auto auto;
 }
 
-.available {
+header #api_status.available {
 	background-color: #FF545F;
 }
