@@ -37,9 +37,10 @@ $(document).ready(function () {
     url: 'http://0.0.0.0:5001/api/v1/places_search/',
     type: 'POST',
     data: '{}',
-    contentype: 'aplication/json; charset=UTF-8',
+    contentType: 'application/json',
     dataType: 'json',
     success: function (data) {
+      console.log(data);
       for (const obtData in data) {
         const place = data[obtData];
         const struct = [
@@ -81,7 +82,6 @@ $(document).ready(function () {
           '</article>'
         ];
         $(struct.join('')).appendTo($('.places'));
-      }
-    }
+      }}
   });
 });
