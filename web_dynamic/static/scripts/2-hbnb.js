@@ -19,7 +19,7 @@ function checkAm() {
        }
      });
   });
-});
+};
 
 function checkStatus() {
 
