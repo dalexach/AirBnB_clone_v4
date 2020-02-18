@@ -24,6 +24,7 @@
 
 .container .filters .amenities {
 	width: 25%;
+	
 }
 
 .container .filters button {
@@ -58,6 +59,9 @@
 	font-weight: 400;
 	font-size: 14px;
 	margin: 7px 0 3px 40px;
+	min-height: 15px;
+	overflow-y: scroll;
+	white-space: nowrap;
 }
 
 /**
